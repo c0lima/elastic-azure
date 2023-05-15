@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: elastic-stack
+
+resources:
+  - ../base/namespace.yaml
+  - ../base/elasticsearch/deployment.yaml
+  - ../base/elasticsearch/persistentvolumeclaim.yaml
+  - ../base/elasticsearch/service.yaml
+  - ../base/elasticsearch/storageclass.yaml
+  - ../base/kibana/deployment.yaml
+  - ../base/kibana/service.yaml
+  - ../base/filebeat/serviceaccount.yaml
+  - ../base/filebeat/role-kubeadm-config.yaml
+  - ../base/filebeat/rolebinding-kubeadm-config.yaml
+  - ../base/filebeat/configmap.yaml
+  - ../base/filebeat/clusterrole.yaml
+  - ../base/filebeat/clusterrolebinding.yaml
+  - ../base/filebeat/role.yaml
+  - ../base/filebeat/rolebinding.yaml
+  - ../base/filebeat/daemonset.yaml
