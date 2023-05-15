@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: kibana
-  namespace: myapp
+  namespace: elastic-stack
 spec:
   selector:
     app: kibana

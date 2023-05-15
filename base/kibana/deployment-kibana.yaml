@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kibana
-  namespace: myapp
+  namespace: elastic-stack
 spec:
   replicas: 1
   selector:
